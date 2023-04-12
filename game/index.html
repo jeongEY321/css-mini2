@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapleDefenseGame</title>
+
+    <!-- custom js -->
+    <!-- <script src="./scripts/js/"></script> -->
+    <script src="./app.js" defer></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>버섯 디펜스 게임</header>
+
+        <button class="tutorial-button">튜토리얼</button>
+        <button class="start-button">게임 Start!</button>
+
+        <section class="main">
+            <div class="upper-ui">
+                <!-- 상단UI -->
+                <div class="stage">
+                    <h2>stage <em id="stageNum">1</em> </h2>
+                </div>
+                <div class="enemyGauge">
+                    <!-- 적 게이지 영역 -->
+                    <div class="gauge togo"></div><!-- 처리한 적 -->
+                    <div class="gauge leftover"></div><!-- 남은 적 -->
+                </div>
+                <div class="timer">
+                    <h3 id="time">Time</h3>
+                    <h3 class="playtime">000</h3>
+                </div>
+                <div class="money">
+                    <h3 id="meso">Meso</h3>
+                    <h3 class="totlaMeso">000</h3>
+                </div>
+                <div class="totalScore">
+                    <h3 id="scoreText">Score</h3>
+                    <h3 class="scores">0000</h3>
+                </div>
+
+                <div class="summon">
+                   <img class="miner" src="./img/characters/mechanic-unscreen.gif" alt="">
+                   <img class="attacker" src="./img/characters/attacker-unscreen.gif" alt="">
+                </div>
+            </div>
+
+            <div class="game-zone">
+                <div class="lane lane1">
+                    <div class="summon-zone">
+                    </div>
+                </div>
+                <div class="lane lane2">
+                    <div class="summon-zone">
+                    </div>
+                </div>
+                <div class="lane lane3">
+                    <div class="summon-zone">
+                    </div>
+                </div>
+                <div class="lane lane4">
+                    <div class="summon-zone">
+                    </div>
+                </div>
+            </div>
+            <!--  <img src="./img/Mushy.gif" alt="mushy"> -->
+        </section>
+        <div class="audio">
+            <!-- title:    titleBG -->
+            <!-- 튜토리얼:  first-step-master -->
+            <!-- maingame: Rest'N peace -->
+            <audio src="./source/music/Title-TitleBG.mp3" autoplay loop>
+                <button><span class="lnr lnr-volume-high"></span></button>
+            </audio>
+        </div>
+    </div>
+</body>
+
+</html>

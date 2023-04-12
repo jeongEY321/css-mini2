@@ -1,0 +1,18 @@
+body {
+    background-color: #81C4A6;
+}
+.grid {
+    margin:1em auto;
+    border-collapse:collapse;
+}
+.grid td {
+    cursor:pointer;
+    width:110px; height: 110px;
+    border:2px solid #C8EB9A;
+    text-align:center;
+    font-family:sans-serif; font-size:13px;
+    font-size: 5rem;
+}
+#menu {
+    float: left;
+}
