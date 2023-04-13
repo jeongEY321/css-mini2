@@ -7,19 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MapleDefenseGame</title>
 
-    <!-- custom js -->
-    <!-- <script src="./scripts/js/"></script> -->
-    <script src="./app.js" defer></script>
+
+    <!-- linear icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <!-- fontawesome css: https://fontawesome.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- 파비콘 넣기 -->
+    <!-- <link rel="icon" href="./siteicon.ico"> -->
+    <link rel="icon" href="./source/fabicon/StrawberryFabi.ico">
     <!-- custom css -->
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./scripts/css/main.css">
+
+    <!-- custom js -->
+    <script src="./scripts/js/app.js" defer></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <header>버섯 디펜스 게임</header>
+        <header>
+            <img class="mushy" src="./img/enemys/Mushy.gif" alt="">
+            버섯 디펜스 게임
+            <img class="mushy-rev" src="./img/enemys/Mushy-rev.gif" alt="">
+        </header>
 
-        <button class="tutorial-button">튜토리얼</button>
         <button class="start-button">게임 Start!</button>
+        <button class="audioCtrl"><span class="lnr lnr-volume-high"></span></button>
+        <!-- <audio src="./source/music/Title-TitleBG.mp3" autoplay loop></audio> -->
+        <!-- <button><span class="lnr lnr-volume-high"></span></button> -->
+        <!-- title:    titleBG -->
+        <!-- 튜토리얼:  first-step-master -->
+        <!-- maingame: Rest'N peace -->
 
         <section class="main">
             <div class="upper-ui">
@@ -33,10 +51,12 @@
                     <div class="gauge leftover"></div><!-- 남은 적 -->
                 </div>
                 <div class="timer">
+                    <!-- 게임 진행 시간 -->
                     <h3 id="time">Time</h3>
                     <h3 class="playtime">000</h3>
                 </div>
                 <div class="money">
+                    <!--  -->
                     <h3 id="meso">Meso</h3>
                     <h3 class="totlaMeso">000</h3>
                 </div>
@@ -45,40 +65,77 @@
                     <h3 class="scores">0000</h3>
                 </div>
 
-                <div class="summon">
-                   <img class="miner" src="./img/characters/mechanic-unscreen.gif" alt="">
-                   <img class="attacker" src="./img/characters/attacker-unscreen.gif" alt="">
+                <div class="summon-list">
+                    <div class="miner">
+                        <div class="miner-txt">
+                            광부: 메소를<br>
+                            캐기위해<br>
+                            존재하는<br>
+                            광부이다.
+                        </div>
+                        <img class="miner-img" src="./img/characters/mechanic-unscreen.gif" alt="">
+                    </div>
+                    <div class="attacker">
+                        <div class="attacker-txt">
+                            요원: 버섯<br>
+                            퇴치를 위해<br>
+                            고용된<br>
+                            요원이다
+                        </div>
+                        <img class="attacker-img" src="./img/characters/attacker-unscreen.gif" alt="">
+                    </div>
                 </div>
             </div>
 
             <div class="game-zone">
                 <div class="lane lane1">
-                    <div class="summon-zone">
+                    <div class="left">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="middle">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
                 <div class="lane lane2">
-                    <div class="summon-zone">
+                    <div class="left">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="middle">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
                 <div class="lane lane3">
-                    <div class="summon-zone">
+                    <div class="left">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="middle">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
                 <div class="lane lane4">
-                    <div class="summon-zone">
+                    <div class="left">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="middle">
+                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
             </div>
             <!--  <img src="./img/Mushy.gif" alt="mushy"> -->
         </section>
-        <div class="audio">
-            <!-- title:    titleBG -->
-            <!-- 튜토리얼:  first-step-master -->
-            <!-- maingame: Rest'N peace -->
-            <audio src="./source/music/Title-TitleBG.mp3" autoplay loop>
-                <button><span class="lnr lnr-volume-high"></span></button>
-            </audio>
-        </div>
+
     </div>
 </body>
 
