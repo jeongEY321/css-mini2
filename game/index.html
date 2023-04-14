@@ -21,9 +21,11 @@
 
     <!-- custom js -->
     <script src="./scripts/js/app.js" defer></script>
+    <script src="./scripts/js/gameMng.js" defer></script>
 </head>
 
 <body>
+    <!-- <div class="NEM-textbox">Not Enough Meso!</div> -->
     <div class="wrapper">
         <header>
             <img class="mushy" src="./img/enemys/Mushy.gif" alt="">
@@ -33,12 +35,11 @@
 
         <button class="start-button">게임 Start!</button>
         <button class="audioCtrl"><span class="lnr lnr-volume-high"></span></button>
-        <!-- <audio src="./source/music/Title-TitleBG.mp3" autoplay loop></audio> -->
+        <audio src="./source/music/Title-TitleBG.mp3" autoplay loop></audio>
         <!-- <button><span class="lnr lnr-volume-high"></span></button> -->
         <!-- title:    titleBG -->
         <!-- 튜토리얼:  first-step-master -->
         <!-- maingame: Rest'N peace -->
-
         <section class="main">
             <div class="upper-ui">
                 <!-- 상단UI -->
@@ -58,7 +59,7 @@
                 <div class="money">
                     <!--  -->
                     <h3 id="meso">Meso</h3>
-                    <h3 class="totlaMeso">000</h3>
+                    <h3 class="totalMeso">00000</h3>
                 </div>
                 <div class="totalScore">
                     <h3 id="scoreText">Score</h3>
@@ -68,19 +69,17 @@
                 <div class="summon-list">
                     <div class="miner">
                         <div class="miner-txt">
-                            광부: 메소를<br>
-                            캐기위해<br>
-                            존재하는<br>
-                            광부이다.
+                            광부:500메소<br>
+                            메소를 캐기위해<br>
+                            존재하는 광부다.
                         </div>
                         <img class="miner-img" src="./img/characters/mechanic-unscreen.gif" alt="">
                     </div>
                     <div class="attacker">
                         <div class="attacker-txt">
-                            요원: 버섯<br>
-                            퇴치를 위해<br>
-                            고용된<br>
-                            요원이다
+                            요원:1000메소<br>
+                            버섯퇴치를 위해<br>
+                            고용된 요원이다.
                         </div>
                         <img class="attacker-img" src="./img/characters/attacker-unscreen.gif" alt="">
                     </div>
@@ -90,46 +89,58 @@
             <div class="game-zone">
                 <div class="lane lane1">
                     <div class="left">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="middle">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="right">
-                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
                 <div class="lane lane2">
                     <div class="left">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="middle">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="right">
-                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
                 <div class="lane lane3">
                     <div class="left">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="middle">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="right">
-                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
                 <div class="lane lane4">
                     <div class="left">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="middle">
-                        <img src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                     <div class="right">
-                        <img src="./img/characters/mining-unscreen(150150).gif" alt="">
+                        <img class="game-attacker hero" src="./img/characters/char-atk(150150).gif" alt="">
+                        <img class="game-miner hero" src="./img/characters/mining-unscreen(150150).gif" alt="">
                     </div>
                 </div>
             </div>
